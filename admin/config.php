@@ -394,7 +394,7 @@
                 'title'    => __( '页脚右侧代码', 'redux-framework-demo' ),
                 'subtitle' => __( '显示在页脚右边的内容', 'redux-framework-demo' ),
                 'desc'     => __( '' ),
-                'default'  => '&copy; 2015&mdash;2017 <a href="'.get_option('home').'/">'.get_bloginfo('name').'</a><br>Powered by  <a href="http://wordpress.org" target="_blank">WordPress</a> • Design by <a href="http://www.bcdon.com" target="_blank">BCDON</a>',
+                'default'  => '&copy; 2015&mdash;2017 <a href="'.get_option('home').'/">'.get_bloginfo('name').'</a><br>Powered by  <a href="http://wordpress.org" target="_blank">WordPress</a> • Design by <a href="http://www.bcdon.com" target="_blank">Bcdon</a>',
             )
             
         )
