@@ -11,5 +11,7 @@
       <?php else : ?>
         当前没有文章！
       <?php endif; ?>
+      <div class="page_navi"><?php par_pagenavi(9); ?></div>
+
   </div>
   <?php get_footer(); ?>

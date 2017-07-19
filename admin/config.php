@@ -354,7 +354,7 @@
                 //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
                 'desc'     => __( '', 'redux-framework-demo' ),
                 'subtitle' => __( '上传一张自定义Logo图片' ),
-                'default'  => array( 'url' => 'http://s.wordpress.org/style/images/codeispoetry.png' ),
+                'default'  => array( 'url' => ''.get_bloginfo('template_url').'/images/logo.png' ),
                 //'hint'      => array(
                 //    'title'     => 'Hint Title',
                 //    'content'   => 'This is a <b>hint</b> for the media field with a Title.',
@@ -375,16 +375,16 @@
                 'title'    => __( '页脚左侧代码', 'redux-framework-demo' ),
                 'subtitle' => __( '显示在页脚左边的内容', 'redux-framework-demo' ),
                 'desc'     => __( '' ),
-                'default'  => '<a href="" class="o-50 glow no-underline mr3">
-      <img src="'.get_bloginfo('template_url').'/img/icon-fore.svg" alt="Fore">
+                'default'  => '<a href="" target="_blank" class="o-50 glow no-underline mr3">
+      <img src="'.get_bloginfo('template_url').'/img/icon-facebook.svg" alt="Facebook">
     </a>
-    <a href="https://twitter.com/" class="o-50 glow no-underline mr3">
+    <a href="https://twitter.com/" target="_blank" class="o-50 glow no-underline mr3">
       <img src="'.get_bloginfo('template_url').'/img/icon-twitter.svg" alt="Twitter">
     </a>
-    <a href="https://dribbble.com/" class="o-50 glow no-underline mr3">
-      <img src="'.get_bloginfo('template_url').'/img/icon-dribbble.svg" alt="Dribbble">
+    <a href="" target="_blank" class="o-50 glow no-underline mr3">
+      <img src="'.get_bloginfo('template_url').'/img/icon-dribbble.svg" alt="Home">
     </a>
-    <a href="https://github.com/bcdon/" class="o-50 glow no-underline">
+    <a href="https://github.com/bcdon/" target="_blank" class="o-50 glow no-underline">
       <img src="'.get_bloginfo('template_url').'/img/icon-github.svg" alt="GitHub">
     </a>',
             ),
@@ -442,7 +442,7 @@
     if ( file_exists( dirname( __FILE__ ) . '/../README.md' ) ) {
         $section = array(
             'icon'   => 'el el-list-alt',
-            'title'  => __( 'Documentation', 'redux-framework-demo' ),
+            'title'  => __( '主题说明', 'redux-framework-demo' ),
             'fields' => array(
                 array(
                     'id'       => '17',
