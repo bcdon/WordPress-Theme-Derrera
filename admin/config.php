@@ -375,16 +375,16 @@
                 'title'    => __( '页脚左侧代码', 'redux-framework-demo' ),
                 'subtitle' => __( '显示在页脚左边的内容', 'redux-framework-demo' ),
                 'desc'     => __( '' ),
-                'default'  => '<a href="https://foredesign.co" class="o-50 glow no-underline mr3">
-      <img src="'.get_bloginfo('template_url').'/img/icon-fore.svg" alt="Fore Design">
+                'default'  => '<a href="" class="o-50 glow no-underline mr3">
+      <img src="'.get_bloginfo('template_url').'/img/icon-fore.svg" alt="Fore">
     </a>
-    <a href="https://twitter.com/dperrera" class="o-50 glow no-underline mr3">
+    <a href="https://twitter.com/" class="o-50 glow no-underline mr3">
       <img src="'.get_bloginfo('template_url').'/img/icon-twitter.svg" alt="Twitter">
     </a>
-    <a href="https://dribbble.com/dperrera" class="o-50 glow no-underline mr3">
+    <a href="https://dribbble.com/" class="o-50 glow no-underline mr3">
       <img src="'.get_bloginfo('template_url').'/img/icon-dribbble.svg" alt="Dribbble">
     </a>
-    <a href="https://github.com/dperrera" class="o-50 glow no-underline">
+    <a href="https://github.com/bcdon/" class="o-50 glow no-underline">
       <img src="'.get_bloginfo('template_url').'/img/icon-github.svg" alt="GitHub">
     </a>',
             ),
