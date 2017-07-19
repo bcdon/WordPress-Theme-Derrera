@@ -29,8 +29,8 @@
 
 ### Derrera 主题更新日志
 
-> Derrera 1.0.3 - 2017.07.20
-> - Derrera正式发布
+> * Derrera 1.0.3 - 2017.07.20
+>  Derrera正式发布
 
-> Derrera 1.0.0 - 2017.07.17
-> - Derrera雏形
+> * Derrera 1.0.0 - 2017.07.17
+>  Derrera雏形
