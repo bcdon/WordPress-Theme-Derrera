@@ -1,5 +1,5 @@
 # WordPress-Theme-Derrera
-### 链接
+### WordPress Derrera 主题介绍
 1.[点击这里链接到我的博客](http://blog.bcdon.com/)<br />
 2.[点击这里链接到主题演示地址](http://demo.bcdon.com/derrera/)<br />
 
