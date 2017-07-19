@@ -1,6 +1,9 @@
 # WordPress-Theme-Derrera
+### 前言
+> Derrera 是我制作的第二款WordPress主题，第一款主题Qithemes没有使用最新的HTML5/CSS3技术来编写前端代码，也没有调用库什么的，显得这款主题并不是那么有美感，再就是代码比较乱，没有规范缩进，所以Qithemes主题目前我已经不再更新和开源出来了，把时间空出来折腾Derrera主题和制作下一款主题。
+> 我个人比较倾向简单但不失美丽的东西，所以开发了Derrera这款简洁主题，
 ### WordPress Derrera 主题介绍
-> WordPress Derrera 主题由卞懂工作室开发制作，
+> WordPress Derrera 主题由Biandong开发制作，
 >
 > 只要再文字前面加上>空格即可
 >
