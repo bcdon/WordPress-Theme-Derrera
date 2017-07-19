@@ -15,3 +15,7 @@ Tags: Derrera,one page
 .page_navi{overflow:hidden;width:100%;text-align:center}
 .page_navi a{height:36px;border:1px solid #DDD;-webkit-border-radius:12px;-moz-border-radius:12px;border-radius:12px;color:#888;text-decoration:none;line-height:36px;margin:2px;padding:3px 8px}
 .page_navi a:hover,.page_navi a.current{border:1px solid #FFBB76;color:#FF7200;font-weight:bolder}
+
+.f-5-l, .f-subheadline-l {
+    font-size: 2rem !important;
+}
