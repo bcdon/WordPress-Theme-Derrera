@@ -129,4 +129,17 @@ function custom_posts_per_page($query){
  
 //this adds the function above to the 'pre_get_posts' action    
 add_action('pre_get_posts','custom_posts_per_page');
+
+//注册侧边栏   
+/** widgets */
+if( function_exists('register_sidebar') ) {
+    register_sidebar(array(
+        'name' => '默认侧边栏',
+        'id'  => 'sidebar-1',
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '<h4>',
+        'after_title' => '</h4>'
+    ));
+}
 ?>

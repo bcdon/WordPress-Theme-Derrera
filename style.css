@@ -7,15 +7,78 @@ Author: 卞懂工作室
 Author URI: http://www.bcdon.com/
 Tags: Derrera,one page
 */
-
-.footerright {
-    text-align: right;
+.page_navi {overflow:hidden;width:100%;text-align:center}
+.page_navi a {height:36px;border:1px solid #DDD;-webkit-border-radius:12px;-moz-border-radius:12px;border-radius:12px;color:#888;text-decoration:none;line-height:36px;margin:2px;padding:3px 8px}
+.page_navi a:hover,.page_navi a.current {border:1px solid #FFBB76;color:#FF7200;font-weight:bolder}
+.f-5-l, .f-subheadline-l {font-size: 2rem !important;}
+.clear {clear:both; height: 0; line-height: 0; font-size: 0}
+.toc-container {
+	float: left;
+    width: -webkit-calc(100% - 310px);
+}
+.content {
+    float: left;
+    width: 70%;
+    width: calc(100% - 310px);
+    width: -webkit-calc(100% - 310px);
+    /*padding-right: 3rem;*/
+}
+.measure {
+    max-width: 100%!important;
+}
+.sidebar {
+	width: 310px;
+    float: left;
+    padding: 0 30px 0;
+    border-left: 1px solid #eee;
 }
 
-.page_navi{overflow:hidden;width:100%;text-align:center}
-.page_navi a{height:36px;border:1px solid #DDD;-webkit-border-radius:12px;-moz-border-radius:12px;border-radius:12px;color:#888;text-decoration:none;line-height:36px;margin:2px;padding:3px 8px}
-.page_navi a:hover,.page_navi a.current{border:1px solid #FFBB76;color:#FF7200;font-weight:bolder}
+.grid_sidebar ul {
+	 list-style-type: none;
+	 margin: 0;
+	 padding: 0;
+}
+.grid_sidebar a {
+	 text-decoration:none;
+}
+.grid_sidebar ul li{
+padding: 10px 0 10px 0;
+}
+.widget {
+    margin: 0 0 30px;
+    word-wrap: break-word;
+    background: #fff;
+    border: solid 1px #bec3c7;
+    padding: 14px;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.1);
+}
 
-.f-5-l, .f-subheadline-l {
-    font-size: 2rem !important;
+.footer {margin-top: 3rem; border-top: 1px solid #eee;}
+.footerright {text-align: right;}
+.mb0 {
+    margin-bottom: 1rem!important;
+}
+.mb5 {
+    margin-bottom: 1rem!important;
+}
+@media screen and (max-width:768px) {
+    .toc-container {
+    float: left;
+    width: 100%;}
+    .sidebar {
+    width: 100%;
+    float: left;
+    padding: 0 30px 0;}
+    .content {
+    float: left;
+    width: 100%;
+    padding-right: 0rem;
+}
+
+}
+@media screen and (min-width: 60em){
+.min-vh-50-l {
+     min-height: 00vh!important; 
+}
 }
