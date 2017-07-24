@@ -16,13 +16,6 @@
 > * 除库和后台框架外所有代码已经再三审查和调试，基本没有冗余，基本也没有bug，
 >
 > * 更多特性等待你发现...
-##### 首页样式浏览
-
-<img src="http://blog.bcdon.com/wp-content/uploads/2017/07/GAP2VN7MH4P98B4X1L8.png" width="480px" />
-
-##### 文章页样式浏览
-
-<img src="http://blog.bcdon.com/wp-content/uploads/2017/07/MEAVOC_V3XQRWAR98X1.png" width="480px" /> 
 
 ### 主题更新说明
 > 目前Derrera主题版本号为 1.04，主题的每一次修改都将同步到这个GitHub仓库里，若没有多大的变动不修改版本号，有明显太多变动则在该版本号上增加0.01个版本，并补上该版本的更新日志。
