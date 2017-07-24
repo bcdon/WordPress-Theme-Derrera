@@ -114,31 +114,15 @@ function par_pagenavi($range = 9){
     if($paged != $max_page){echo "<a href='" . get_pagenum_link($max_page) . "' class='extend' title='跳转到最后一页'> 最后一页 </a>";}}
 }
 
-//调整分页文章数量
-function custom_posts_per_page($query){
-    if(is_home()){
-    $query->set('posts_per_page',20);//首页每页显示8篇文章
-    }
-    if(is_search()){
-        $query->set('posts_per_page',-1);//搜索页显示所有匹配的文章，不分页
-    }
-    if(is_archive()){
-        $query->set('posts_per_page',25);//archive每页显示25篇文章
-}//endif
-}//function
- 
-//this adds the function above to the 'pre_get_posts' action    
-add_action('pre_get_posts','custom_posts_per_page');
-
 //注册侧边栏   
 /** widgets */
 if( function_exists('register_sidebar') ) {
     register_sidebar(array(
         'name' => '默认侧边栏',
         'id'  => 'sidebar-1',
-        'before_widget' => '',
-        'after_widget' => '',
-        'before_title' => '<h4>',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h4 class="widget-title">',
         'after_title' => '</h4>'
     ));
 }

@@ -1,6 +1,4 @@
-<div class="sidebar">
-<!-- Column 2 / Sidebar -->   
-   <div class="grid_sidebar">   
+<div class="sidebar"> 
    <?php if ( !function_exists('dynamic_sidebar')    
                        || !dynamic_sidebar('sidebar-1') ) : ?>   
        <h4>分类目录</h4>   
@@ -25,5 +23,4 @@
            <?php wp_get_archives('limit=10'); ?>   
        </ul>      
    <?php endif; ?>  
-   </div>
 </div>

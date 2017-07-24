@@ -1,5 +1,5 @@
   <?php get_header(); ?>
-    <div class="barba-container menu-active" data-namespace="post">
+    <div class="barba-container menu-active mt3" data-namespace="post">
       <div class="content">
         <div class="ph4 ph5-l">
           <header class="min-vh-50-l lh-solid w-100 mt2 mb5 pt4
