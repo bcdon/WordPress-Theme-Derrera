@@ -5,7 +5,11 @@
           <header class="min-vh-50-l lh-solid w-100 mt2 mb5 pt4
             flex flex-column items-baseline justify-between">
             <h1 class="f2 f1-m f-5-l mt2 mb0 mw7 lh-title lh-solid-l"><?php the_title(); ?></h1>
-            <span class="f7 ttu tracked-mega mono silver mb5"><?php the_time('Y年n月j日') ?></span>
+            <div class="info f7 ttu tracked-mega mono silver mb5">
+              <span><?php the_time('j n月 Y') ?></span>
+               <span>阅读<?php post_views('', '次'); ?></span>
+               <span class="comment fr" title="点此留言"><a href="#respond" title="点此留言"><?php echo zfunc_comments_users($post->ID); ?>人留言</a></span>
+            </div>
           </header>
           <div class="
             nested-copy-seperator
@@ -23,6 +27,7 @@
             </div>
           </div>
         </div>
+        <?php comments_template(); ?>
         <div class="bt bb b--light-gray flex content-stretch justify-end mt6">
               <a class="hover-bg-near-white no-underline 
               flex items-center w-50 pv3 pv4-ns ph4 ph5-l" href="<?php previous_post_url(); ?>">

@@ -65,7 +65,7 @@ function previous_post_title(){
         preg_match_all($pattern, $html, $matches);
         $previoustitle=$matches[1][0];
     }else{
-        $previoustitle="没有了，已经是最新的文章了";
+        $previoustitle="没有了，已经是最后的文章了";
         }
     
     echo "$previoustitle";
@@ -78,7 +78,7 @@ function next_post_title(){
         preg_match_all($pattern, $html, $matches);
         $nexttitle=$matches[1][0];
     }else{
-        $nexttitle="没有了，已经是最后的文章了";
+        $nexttitle="没有了，已经是最新的文章了";
         }
     
     echo "$nexttitle";
@@ -126,4 +126,77 @@ if( function_exists('register_sidebar') ) {
         'after_title' => '</h4>'
     ));
 }
+//评论表单开始
+function aurelius_comment($comment, $args, $depth) 
+{
+   $GLOBALS['comment'] = $comment; ?>
+   <li class="comment" id="li-comment-<?php comment_ID(); ?>">
+        <div class="gravatar"> <?php if (function_exists('get_avatar') && get_option('show_avatars')) { echo get_avatar($comment, 48); } ?>
+ <?php comment_reply_link(array_merge( $args, array('reply_text' => '回复','depth' => $depth, 'max_depth' => $args['max_depth']))) ?> </div>
+        <div class="comment_content" id="comment-<?php comment_ID(); ?>">   
+            <div class="clearfix">
+                    <?php printf(__('<cite class="author_name">%s</cite>'), get_comment_author_link()); ?>
+                    <div class="comment-meta commentmetadata">发表于：<?php echo get_comment_time('Y-m-d H:i'); ?></div>
+                       <?php edit_comment_link('修改'); ?>
+            </div>
+
+            <div class="comment_text">
+                <?php if ($comment->comment_approved == '0') : ?>
+                    <em>你的评论正在审核，稍后会显示出来！</em><br />
+        <?php endif; ?>
+        <?php comment_text(); ?>
+            </div>
+        </div>
+<?php } ?>
+<?php 
+//评论表单结束
+/* 获取文章的评论人数 by zwwooooo | zww.me */
+function zfunc_comments_users($postid=0,$which=0) {
+    $comments = get_comments('status=approve&type=comment&post_id='.$postid); //获取文章的所有评论
+    if ($comments) {
+        $i=0; $j=0; $commentusers=array();
+        foreach ($comments as $comment) {
+            ++$i;
+            if ($i==1) { $commentusers[] = $comment->comment_author_email; ++$j; }
+            if ( !in_array($comment->comment_author_email, $commentusers) ) {
+                $commentusers[] = $comment->comment_author_email;
+                ++$j;
+            }
+        }
+        $output = array($j,$i);
+        $which = ($which == 0) ? 0 : 1;
+        return $output[$which]; //返回评论人数
+    }
+    return 0; //没有评论返回0
+}
+/* 访问计数 */
+function record_visitors()
+{
+    if (is_singular())
+    {
+      global $post;
+      $post_ID = $post->ID;
+      if($post_ID)
+      {
+          $post_views = (int)get_post_meta($post_ID, 'views', true);
+          if(!update_post_meta($post_ID, 'views', ($post_views+1)))
+          {
+            add_post_meta($post_ID, 'views', 1, true);
+          }
+      }
+    }
+}
+add_action('wp_head', 'record_visitors');
+ 
+/// 函数名称：post_views
+/// 函数作用：取得文章的阅读次数
+function post_views($before = '(点击 ', $after = ' 次)', $echo = 1)
+{
+  global $post;
+  $post_ID = $post->ID;
+  $views = (int)get_post_meta($post_ID, 'views', true);
+  if ($echo) echo $before, number_format($views), $after;
+  else return $views;
+}
+
 ?>
