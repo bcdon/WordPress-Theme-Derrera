@@ -2,7 +2,7 @@
 Theme Name: Derrera
 Theme URI: http://www.bcdon.com/derrera
 Description: Derrera主题由卞懂工作室开发
-Version: 1.0.5
+Version: 1.0.6
 Author: 卞懂工作室
 Author URI: http://www.bcdon.com/
 Tags: Derrera,one page
@@ -119,7 +119,7 @@ a:hover {
 	list-style: none;
 }
 textarea#comment {
-	width: 90%;
+	width: 100%;
 	background-color: #f7f7f7;
 	border: 1px solid rgba(51, 51, 51, 0.1);
 	border-radius: 2px;
@@ -230,4 +230,18 @@ a.comment-edit-link {
     font-size: 15px;
     font-weight: 800;
     letter-spacing: 0.1818em;
+}
+/*一言hitokoto*/
+#top_hitokoto marquee {
+    border-bottom: 1px solid lightgrey;
+    padding-bottom: 4px;
+    font-size: smaller;
+}
+#top_hitokoto strong {
+    float: right;
+    font-size: small;
+    padding-top: 4px;
+}
+div#top_hitokoto {
+    padding: 20px;
 }

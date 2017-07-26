@@ -66,6 +66,7 @@
 <?php flush(); ?>
 
 <body class="overflow-x-hidden">
+
   <div class="header menu-active bg-white
     h3 vh-100-l
     br-l b--light-gray
@@ -83,6 +84,20 @@
          ?>
         </a>
       </div>
+      <!-- top_hitokoto stard -->
+<div id="top_hitokoto">
+<div class="hitokoto">Loading...</div>
+<script src="http://cdn.myiooc.cn/jquery.min.js"></script><br />
+<script>
+    $.post("http://api.hitokoto.cn/",null,function(e){
+        // $('修改的class名称')
+        // e是json数据，里边还有其他内容可以看看文档
+        $('.hitokoto').html("<marquee direction=left>『 "+e.hitokoto+" 』</marquee><strong>——「"+e.from+"」</strong>")
+      }
+    ,'JSON');
+</script>
+  </div>
+<!-- top_music end -->
       <div class="fixed-l bottom-0 left-0 inline-flex justify-center items-center ma4-l">
         <a href="<?php echo get_option('home'); ?>/about" class="o-50 glow">
           <img src="<?php bloginfo('template_url'); ?>/img/icon-about.svg" alt="">
